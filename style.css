@@ -640,13 +640,14 @@ color:black;
 .carouselArrow.prev{
 
 left:-8px;
+display:none;
 
 }
 
 .carouselArrow.next{
 
 right:-8px;
-
+display:none;
 }
 
 .carouselDots{
