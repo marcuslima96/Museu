@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>A Arte de Amar Você</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cormorant+Garamond:wght@300;400;500&family=Montserrat:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <audio id="bgMusic" src="audio/trilha.mp3" loop preload="auto"></audio>
+
+    <div id="intro">
+      <h2 id="introText"></h2>
+    </div>
+
+    <section id="museum">
+      <img src="img/entrada.jpg" class="background" />
+
+      <div class="dark"></div>
+
+      <div class="portalGlow"></div>
+
+      <div class="museumContent">
+        <div class="plaque">
+          <span>EXPOSIÇÃO TEMPORÁRIA</span>
+
+          <h1>A Arte de Amar Você</h1>
+
+          <p>
+            Nesta exposição não existem obras famosas. Apenas a maior obra de
+            todas:
+            <strong>nós.</strong>
+          </p>
+
+          <small>
+            Criado especialmente para Degnay
+
+            <br /><br />
+
+            13 de Julho de 2026
+          </small>
+        </div>
+
+        <div class="visitorBox">
+          <small>VISITANTES</small>
+
+          <div id="counter">000000</div>
+        </div>
+
+        <button id="startButton">Iniciar a Visita</button>
+      </div>
+    </section>
+
+    <!-- ========================= -->
+    <!-- SALA 1 -->
+    <!-- ========================= -->
+
+    <section id="room1" class="room">
+      <div class="spotlight"></div>
+
+      <div class="frame">
+        <img src="img/sala1.jpg" />
+      </div>
+
+      <h2>13 - O Começo de Tudo</h2>
+
+      <p>
+        Toda grande história tem um começo. A nossa nasceu no dia 13 de
+        dezembro, durante a confraternização da empresa. Entre risadas, amigos e
+        uma noite inesquecível, aconteceu o nosso primeiro beijo. Foi ali que
+        tudo começou e que nasceu o "nós" que, desde então, celebramos com tanto
+        carinho. ❤️
+      </p>
+
+      <div class="navButtons">
+        <button class="navButton secondary prevButton" data-prev="museum">
+          Voltar
+        </button>
+        <button class="navButton nextButton" data-next="room2">
+          Continuar
+        </button>
+      </div>
+    </section>
+
+    <!-- ========================= -->
+    <!-- SALA 2 -->
+    <!-- ========================= -->
+
+    <section id="room2" class="room">
+      <div class="spotlight"></div>
+
+      <div class="frame">
+        <img src="img/sala2.jpg" />
+      </div>
+
+      <h2>O pulo do gato</h2>
+
+      <p>
+        A primeira vez que saimos juntos já mostrou que nossa história não seria
+        comum. Naquele dia, até pular a janela do seu quarto pareceu a decisão
+        mais fácil do mundo, porque qualquer aventura valia a pena para passar
+        mais um tempo com você.
+      </p>
+
+      <div class="navButtons">
+        <button class="navButton secondary prevButton" data-prev="room1">
+          Voltar
+        </button>
+        <button class="navButton nextButton" data-next="room3">
+          Continuar
+        </button>
+      </div>
+    </section>
+
+    <!-- ========================= -->
+    <!-- SALA 3 -->
+    <!-- ========================= -->
+
+    <section id="room3" class="room">
+      <div class="spotlight"></div>
+
+      <div class="frame">
+        <img src="img/sala3.jpg" />
+      </div>
+
+      <h2>A Primeira Viagem Juntos</h2>
+
+      <p>
+        Nossa primeira viagem juntos foi para Floresta, e ela já mostrou que as
+        melhores lembranças nem sempre saem como o planejado. Até hoje eu brinco
+        por ter comprado uma "camisa de R$100" achando que ia aproveitar tudo da
+        cavalgada, mas chegamos tarde e, as bebidas já tinham acabado... no fim,
+        nem água eu bebi. 😂
+      </p>
+
+      <div class="navButtons">
+        <button class="navButton secondary prevButton" data-prev="room2">
+          Voltar
+        </button>
+        <button class="navButton nextButton" data-next="room4">
+          Continuar
+        </button>
+      </div>
+    </section>
+
+    <!-- ========================= -->
+    <!-- SALA 4 -->
+    <!-- ========================= -->
+
+    <section id="room4" class="room">
+      <div class="spotlight"></div>
+
+      <div class="frame">
+        <img src="img/sala4.jpg" />
+      </div>
+
+      <h2>Casal "Gamer"</h2>
+
+      <p>
+        Nossa primeira gameplay juntos começou com Mortal Kombat, mas foi em It
+        Takes Two que veio a verdadeira aventura. Entre risadas, tentativas e
+        algumas fases que pareciam impossíveis, sempre tinha aquele momento em
+        que você dizia: "perdi a paciencia! passa pra mim". 😂
+      </p>
+
+      <div class="navButtons">
+        <button class="navButton secondary prevButton" data-prev="room3">
+          Voltar
+        </button>
+        <button class="navButton nextButton" data-next="room5">
+          Continuar
+        </button>
+      </div>
+    </section>
+
+    <!-- ========================= -->
+    <!-- SALA 5 -->
+    <!-- ========================= -->
+
+    <section id="room5" class="room">
+      <div class="spotlight"></div>
+
+      <div class="frame">
+        <img src="img/sala5.jpg" />
+      </div>
+
+      <h2>Primeiro Carnaval</h2>
+
+      <p>
+        Fomos para os blocos, acompanhamos o trio, tomamos banho de pipa e
+        chuva... Mas no fim das contas, percebi que o melhor da festa nunca foi
+        o carnaval... foi dividir cada momento com você.
+      </p>
+
+      <div class="navButtons">
+        <button class="navButton secondary prevButton" data-prev="room4">
+          Voltar
+        </button>
+        <button class="navButton nextButton" data-next="room6">
+          Continuar
+        </button>
+      </div>
+    </section>
+
+    <!-- ========================= -->
+    <!-- SALA 6 -->
+    <!-- ========================= -->
+
+    <section id="room6" class="room">
+      <div class="spotlight"></div>
+
+      <div class="frame">
+        <img src="img/sala6.jpg" />
+      </div>
+
+      <h2>São João & Copa</h2>
+
+      <p>
+        Nosso primeiro São João juntos foi especial do começo ao fim. Decoramos
+        a empresa lado a lado, entramos no clima da festa, comemos muita comida
+        típica e aproveitamos cada momento. No mesmo mês, ainda vibramos juntos
+        em cada jogo do Brasil na Copa do Mundo. A eliminação doeu, mas ter você
+        ao meu lado fez até essa lembrança valer a pena. ❤️
+      </p>
+
+      <div class="navButtons">
+        <button class="navButton secondary prevButton" data-prev="room5">
+          Voltar
+        </button>
+        <button class="navButton nextButton" data-next="room7">
+          Continuar
+        </button>
+      </div>
+    </section>
+
+    <!-- ========================= -->
+    <!-- SALA 7 - PASSAGEM DO TEMPO (CARROSSEL) -->
+    <!-- ========================= -->
+
+    <section id="room7" class="room">
+      <div class="spotlight"></div>
+
+      <h2>Nosso Tempo</h2>
+
+      <div class="carouselFrame">
+        <div class="carouselTrack">
+          <img src="img/sala7_1.jpg" class="carouselImg active" />
+          <img src="img/sala7_2.jpg" class="carouselImg" />
+          <img src="img/sala7_3.jpg" class="carouselImg" />
+          <img src="img/sala7_4.jpg" class="carouselImg" />
+          <img src="img/sala7_5.jpg" class="carouselImg" />
+        </div>
+
+        <button class="carouselArrow prev" aria-label="Foto anterior">‹</button>
+        <button class="carouselArrow next" aria-label="Próxima foto">›</button>
+      </div>
+
+      <div class="carouselDots">
+        <span class="dot active" data-index="0"></span>
+        <span class="dot" data-index="1"></span>
+        <span class="dot" data-index="2"></span>
+        <span class="dot" data-index="3"></span>
+        <span class="dot" data-index="4"></span>
+      </div>
+
+      <p>
+        Entre uma foto e outra, o tempo passou e a gente nem percebeu. Cada
+        imagem aqui é um pedacinho de nós, guardado pra sempre.
+      </p>
+
+      <div class="navButtons">
+        <button class="navButton secondary prevButton" data-prev="room6">
+          Voltar
+        </button>
+        <button class="navButton nextButton" data-next="roomFinal">
+          Continuar
+        </button>
+      </div>
+    </section>
+
+    <!-- ========================= -->
+    <!-- SALA FINAL -->
+    <!-- ========================= -->
+
+    <section id="roomFinal" class="room">
+      <div class="spotlight"></div>
+
+      <div class="plaqueFinal">
+        <span>EXPOSIÇÃO PERMANENTE</span>
+
+        <h2>Nosso Aniversário de Namoro</h2>
+
+        <p>
+          Desde 13 de dezembro de 2025, cada dia ao seu lado se tornou parte da
+          nossa história.
+        </p>
+
+        <div id="diasJuntos"></div>
+
+        <p>
+          Feliz dia 13, Deg. Esta é apenas mais uma sala deste museu... porque a
+          nossa história continua sendo escrita, um dia de cada vez, ao seu
+          lado.
+        </p>
+      </div>
+
+      <div class="navButtons">
+        <button class="navButton secondary prevButton" data-prev="room7">
+          Voltar
+        </button>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
