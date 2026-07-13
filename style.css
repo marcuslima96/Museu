@@ -424,7 +424,17 @@ opacity:0;
 transform:translateY(30px);
 
 transition:1s 1.3s;
+}
 
+  /* Celulares */
+@media (max-width: 768px){
+
+    .room p{
+
+        font-size:20px;
+        line-height:1.6;
+
+    }
 }
 
 .room.active p{
@@ -798,5 +808,64 @@ font-size:1.6rem;
 letter-spacing:2px;
 
 color:#d7b06d;
+
+}
+
+/* ===========================
+   RESPONSIVO PARA CELULARES
+=========================== */
+
+@media (max-width: 768px){
+
+    #intro h2{
+        font-size:1.5rem;
+        padding:20px;
+    }
+
+    .portalGlow{
+        width:180px;
+        height:320px;
+    }
+
+    .plaque{
+        width:92%;
+        padding:25px 20px;
+    }
+
+    .plaque span{
+        font-size:.7rem;
+        letter-spacing:3px;
+    }
+
+    .plaque h1{
+        font-size:2rem;
+        margin:15px 0;
+    }
+
+    .plaque p{
+        font-size:1.1rem;
+        line-height:1.5;
+    }
+
+    .plaque small{
+        margin-top:20px;
+        font-size:.75rem;
+        letter-spacing:1.5px;
+    }
+
+    .visitorBox{
+        margin-top:25px;
+    }
+
+    #counter{
+        font-size:2rem;
+        letter-spacing:4px;
+    }
+
+    button{
+        margin-top:30px;
+        padding:14px 30px;
+        font-size:.9rem;
+    }
 
 }
