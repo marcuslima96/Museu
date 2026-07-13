@@ -426,17 +426,6 @@ transform:translateY(30px);
 transition:1s 1.3s;
 }
 
-  /* Celulares */
-@media (max-width: 768px){
-
-    .room p{
-
-        font-size:20px;
-        line-height:1.6;
-
-    }
-}
-
 .room.active p{
 
 opacity:1;
