@@ -894,5 +894,19 @@ color:#d7b06d;
         padding:16px 35px;
     }
 
+}
+
+@media (max-width: 600px){
+
+    body{
+        overflow-y: auto;
+    }
+
+    .room{
+        overflow-y: auto;
+        justify-content: flex-start;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
 
 }
