@@ -894,9 +894,10 @@ color:#d7b06d;
         padding:16px 35px;
     }
 
+
 }
 
-@media (max-width: 600px){
+@media (max-width: 700px){
 
     body{
         overflow-y: auto;
