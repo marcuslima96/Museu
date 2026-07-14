@@ -52,7 +52,8 @@ museum.style.display="block";
 
 audioToggle.style.display="flex";
 
-animarContador(contarVisita());
+const visitasSalvas = parseInt(localStorage.getItem("museuVisitas") || "0", 10);
+animarContador(visitasSalvas);
 
 },1500);
 
@@ -63,73 +64,82 @@ animarContador(contarVisita());
 }
 
 // ================================
-// CONTADOR DE VISITAS (real, salvo no navegador)
+// CONTADOR DE VISITAS (salvo no navegador)
 // ================================
+
+const contador = document.getElementById("counter");
+
+function atualizarContador(valor){
+    contador.textContent = valor.toString().padStart(6, "0");
+}
 
 function contarVisita(){
 
-let total = parseInt(localStorage.getItem("museuVisitas") || "0", 10);
+    let total = parseInt(localStorage.getItem("museuVisitas") || "0", 10);
 
-total += 1;
+    total++;
 
-localStorage.setItem("museuVisitas", total);
+    localStorage.setItem("museuVisitas", total);
 
-return total;
+    return total;
 
 }
 
 function animarContador(alvo){
 
-const contador = document.getElementById("counter");
+    const inicio = parseInt(localStorage.getItem("museuVisitasAnterior") || (alvo - 1), 10);
 
-const passos = Math.min(alvo, 30) || 1;
-const incremento = alvo/passos;
-const duracaoPasso = 1200/passos;
+    const passos = 30;
+    const incremento = (alvo - inicio) / passos;
 
-let atual = 0;
+    let atual = inicio;
 
-const intervalo = setInterval(()=>{
+    clearInterval(window.intervaloContador);
 
-atual += incremento;
+    window.intervaloContador = setInterval(()=>{
 
-if(atual >= alvo){
+        atual += incremento;
 
-atual = alvo;
+        if(atual >= alvo){
 
-clearInterval(intervalo);
+            atual = alvo;
+            clearInterval(window.intervaloContador);
+
+            localStorage.setItem("museuVisitasAnterior", alvo);
+
+        }
+
+        atualizarContador(Math.round(atual));
+
+    },40);
 
 }
 
-contador.innerHTML = Math.round(atual).toString().padStart(6,"0");
-
-}, duracaoPasso);
-
-}
+// Exibe o valor salvo ao abrir o site
+atualizarContador(
+    parseInt(localStorage.getItem("museuVisitas") || "0",10)
+);
 
 const startButton = document.getElementById("startButton");
-
 const room1 = document.getElementById("room1");
 
 startButton.addEventListener("click",()=>{
 
-document.querySelector(".museumContent").style.opacity="0";
+    const visitas = contarVisita();
+    animarContador(visitas);
 
-document.querySelector(".museumContent").style.transform="scale(.92)";
+    document.querySelector(".museumContent").style.opacity="0";
+    document.querySelector(".museumContent").style.transform="scale(.92)";
+    document.querySelector(".museumContent").style.transition="1s";
+    document.querySelector(".museumContent").style.pointerEvents="none";
 
-document.querySelector(".museumContent").style.transition="1s";
+    setTimeout(()=>{
+        room1.classList.add("active");
+    },900);
 
-document.querySelector(".museumContent").style.pointerEvents="none";
-
-setTimeout(()=>{
-
-room1.classList.add("active");
-
-},900);
-
-tentarTocarMusica();
+    tentarTocarMusica();
 
 });
-
 // ================================
 // NAVEGAÇÃO ENTRE AS SALAS (avançar e voltar)
 // ================================
