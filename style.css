@@ -882,17 +882,6 @@ color:#d7b06d;
 
 @media (max-width: 600px){
 
-    /* Aumenta a área do carrossel */
-    #room7 .carouselFrame{
-        width:95vw;
-    }
-
-    /* Aumenta a altura da foto */
-    #room7 .carouselImg{
-        height:320px; /* ajuste como preferir */
-        object-fit:cover;
-    }
-
     /* Texto ocupa mais largura */
     #room7 p{
         width:95vw;
@@ -905,11 +894,5 @@ color:#d7b06d;
         padding:16px 35px;
     }
 
-    /* Setas do carrossel maiores */
-    #room7 .carouselArrow{
-        width:55px;
-        height:55px;
-        font-size:2rem;
-    }
 
 }
